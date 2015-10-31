@@ -1,6 +1,0 @@
----
-layout: default
-title: hello-jekyll
----
-
-Hello jekyll!

@@ -1,7 +1,6 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-#permalink: /:categories/:year/:month/:day/:title
-permalink: /:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
@@ -9,7 +8,7 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : 然花·似草
+title : Jekyll Bootstrap
 tagline: Site Tagline
 author :
   name : Name Lastname
@@ -26,12 +25,11 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://corner2015.github.io
+production_url : http://username.github.io
 
-paginate: 30   #这里指定你每一页的文章数目，我这里指定每页最多5篇文章
-paginate_path: "/page:num/"   #这里是分页链接的格式，例如第二页会显示在'/page2/'
+paginate: 20
+paginate_path: "blog/page:num"
 
-encoding: UTF-8
 
 
 
@@ -134,7 +132,7 @@ JB :
   # a hash with key named for the given helper. ex:
   #
   #   pages_list :
-  #     provider : "custom"
+  #     provider : "custom"   
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:

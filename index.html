@@ -1,17 +1,57 @@
 ---
 layout: default
+title: Get busy living or get busy dying.
+tagline:
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">文章列表</h1>
-
-    <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date: '%Y-%m-%d' }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+{% include JB/setup %}
+<div class="page-header">
+    <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
+
+<div class="post">
+    <h3>文章列表</h3>
+    <!-- 遍历分页后的文章 -->
+    <ul class="posts">
+        {% for post in paginator.posts %}
+        <li><span>{{ post.date | date: '%Y-%m-%d' }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<!-- 导航分页链接 -->
+<ul class="pagination">
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <li><a href="/">Previous</a></li>
+        {% else %}
+        <li><a href="{{ paginator.previous_page_path }}">Previous</a></li>
+        {% endif %}
+    {% else %}
+        <li><a href="/" class="disabled">Previous</a></li>
+    {% endif %}
+
+    {% if paginator.page == 1 %}
+        <li class="disabled"><a class="current-page" href="javascript:;">1</a></li>
+    {% else %}
+        <li><a href="/">1</a></li>
+    {% endif %}
+
+    {% for count in (2..paginator.total_pages) %}
+        {% if count == paginator.page %}
+        <li class="disabled"><a class="current-page" href="javascript:;">{{ count }}</a></li>
+        {% else %}
+        <li><a href="/page{{ count }}">{{ count }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+        <li class="next">
+            <a href="{{ paginator.next_page_path }}">Next</a>
+        </li>
+    {% else %}
+        <li class="next disabled">
+            <span>Next</span>
+        </li>
+    {% endif %}
+</ul>
