@@ -12,11 +12,11 @@ highlighter: pygments
 title : 然花·似草
 tagline: Site Tagline
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Corner
+  email : corner.xm@gmail.com
+  github : corner2015
+  #twitter : username
+  #feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
