@@ -78,9 +78,9 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+  archive_path: /c2-archive.html
+  categories_path : /c1-categories.html
+  tags_path : /c3-tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
 
