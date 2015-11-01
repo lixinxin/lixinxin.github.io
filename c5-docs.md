@@ -9,5 +9,5 @@ group: navigation
 
 ### 杂技
 
-- [《MarkDown基础语法》](http://localhost:4000/2015/11/01/MarkDown/)
+- [《MarkDown基础语法》](http://iwebsouls.com/2015/11/01/MarkDown/)
 
